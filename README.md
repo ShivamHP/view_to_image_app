@@ -7,4 +7,6 @@ https://medium.com/androiddevelopers/sharing-content-between-android-apps-2e6db9
 https://developer.android.google.cn/reference/androidx/core/content/FileProvider 
 
 ## Description:
-No READ_EXTERNAL_STORAGE WRITE_EXTERNAL_STORAGE needed: Neither for this app nor for the app that will recieve the image.
+No READ_EXTERNAL_STORAGE WRITE_EXTERNAL_STORAGE needed: Neither for this app nor for the app that will recieve the image. \
+No memory leaks \
+The images get removed from cache once it reaches a threshold and more memory is needed.
