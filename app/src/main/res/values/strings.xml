@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Uv_App</string>
+    <string name="enter_your_text">Enter your text..</string>
+    <string name="share_image">Share image</string>
+</resources>
