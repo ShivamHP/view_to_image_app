@@ -12,15 +12,16 @@ No memory leaks \
 The images get removed from cache once it reaches a threshold and more memory is needed.
 
 ## Important things to keep in mind:
-Make a new file: app/res/xml/provider_path.xml and copy this to it: \
-'''
+Make a new file: app/res/xml/provider_path.xml and copy this to it: 
+```sh
 <?xml version="1.0" encoding="utf-8"?>
 <paths>
     <external-cache-path name="external_files" path="my_images/"/>
 </paths>
-'''
-Also mention this provider in AndroidManifest.xml \
-'''
+```
+
+Also mention this provider in AndroidManifest.xml 
+```sh
 <application ...
     <provider
             android:name="androidx.core.content.FileProvider"
@@ -32,4 +33,4 @@ Also mention this provider in AndroidManifest.xml \
                 android:resource="@xml/provider_path" />
         </provider>
 </application>
-'''
+```
