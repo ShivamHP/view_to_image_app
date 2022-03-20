@@ -11,31 +11,31 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="16dp"
-        android:background="@drawable/gradient_background"
+
         tools:context=".MainActivity">
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/cardView"
+            android:padding="20dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:cardCornerRadius="8dp">
+            app:layout_constraintEnd_toEndOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:background="@android:color/transparent"
+                android:background="@drawable/gradient_background"
                 android:hint="@string/enter_your_text"
                 android:textSize="28sp"
-                android:textStyle="bold"
                 android:textAlignment="center"
                 android:id="@+id/textView" />
 
         </com.google.android.material.card.MaterialCardView>
+
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"

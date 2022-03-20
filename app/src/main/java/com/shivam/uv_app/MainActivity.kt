@@ -23,26 +23,9 @@ class MainActivity : AppCompatActivity() {
         binding.shareButton.setOnClickListener {
             val bitmap = binding.cardView.drawToBitmap(Bitmap.Config.ARGB_8888)
             shareBitmap(bitmap)
-
         }
     }
 
-//    fun getBitmapFromView(view: View): Bitmap? {
-//        //Define a bitmap with the same size as the view
-//        val returnedBitmap =
-//            Bitmap.createBitmap(view.getWidth(), view.getHeight(), Bitmap.Config.ARGB_8888)
-//        //Bind a canvas to it
-//        val canvas = Canvas(returnedBitmap)
-//        //Get the view's background
-//        val bgDrawable: Drawable = view.getBackground()
-//        if (bgDrawable != null) //has background drawable, then draw it on the canvas
-//            bgDrawable.draw(canvas) else  //does not have background drawable, then draw white background on the canvas
-//            canvas.drawColor(Color.WHITE)
-//        // draw the view on the canvas
-//        view.draw(canvas)
-//        //return the bitmap
-//        return returnedBitmap
-//    }
 
     private fun shareBitmap(bitmap: Bitmap) {
         //---Save bitmap to external cache directory---//
@@ -73,8 +56,9 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(Intent.ACTION_SEND)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        intent.putExtra(Intent.EXTRA_TEXT, "Click the link to know more..\n https://github.com/ShivamPachchigar14112/view_to_image_app");
         intent.putExtra(Intent.EXTRA_STREAM, myImageFileUri)
-        intent.type = "image/png"
+        intent.type = "image/*"
         startActivity(Intent.createChooser(intent, "Share with"))
     }
 }
