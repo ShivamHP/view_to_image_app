@@ -2,4 +2,6 @@
     <string name="app_name">Uv_App</string>
     <string name="enter_your_text">Enter your text..</string>
     <string name="share_image">Share image</string>
+    <string name="gandhi_name">- Mahatma Gandhi (Bapu)</string>
+    <string name="gandhi_quote">The greatness of a nation and its moral progress can be judged by the way its animals are treated.</string>
 </resources>
